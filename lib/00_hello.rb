@@ -1,3 +1,5 @@
+require 'pry'
+require 'pry-nav'
 def hello()
 	"Hello!"
 end

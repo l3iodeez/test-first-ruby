@@ -29,8 +29,13 @@ class Temperature
   def self.from_kelvin(k)
  	Temperature.new(:k => k)
  end
+ def self.ftoc(deg)
+	Temperature.from_fahrenheit(deg).in_celsius
+ end
+ def self.ctof(deg)
+	Temperature.from_celsius(deg).in_fahrenheit
+ end
 end
-
  class Celsius < Temperature
  	def initialize(num)
  		super(:c => num)
