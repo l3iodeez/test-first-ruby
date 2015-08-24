@@ -58,7 +58,7 @@ class RPNCalculator < Array
 	def evaluate(str)
 		inputs = self.tokens(str)
 		inputs.each do |item|
-			if item.is_a?(Float) || item.is_a?(Integer)
+			if item.is_a?(Numeric)
 				self.push(item)
 			elsif item == :+
 					self.plus
